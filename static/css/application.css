@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Galdeano);
+@import url(http://fonts.googleapis.com/css?family=Cuprum);
+body{color:#333;font-size:14px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif;background:url("/static/img/dust.png") repeat fixed}
+li.L4{list-style-type:none}
+pre{white-space:pre;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;background-color:#eee;box-shadow:5px 5px 5px #888;padding:5px;overflow:auto}
+.page-heading{margin:5px auto 10px}.page-heading a:focus,.page-heading a:hover{color:#222}
+.page-navbar{margin-bottom:2px;background-color:#1e6e1e}
+.page-article{margin:5px 0;padding:5px}
+.page-footer{color:#555;text-align:center;margin-top:10px;padding:10px;border-top:1px solid #ddd;font-size:16px}.page-footer a{font-size:18px;color:#5cb85c}
+.page-content,.page-comment,.page-categories,.page-tags{padding:5px 15px}
+.page-blank{margin-top:20px}
+.page-content{background-color:#fff;border:1px solid #f3f3f3;border-radius:4px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.1);margin-bottom:20px}.page-content a{color:#5bc0de}
+.page-content .post-heading{color:#000;font-size:20px;font-weight:500;line-height:28px;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;border-bottom:1px solid #ddd}.page-content .post-heading a{color:#222}
+.page-content .post-meta{font-size:15px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif;margin:10px;color:#555}
+.page-content .post-entry{padding:4px;font-size:14px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif;line-height:24px}.page-content .post-entry h1{font-size:24px}
+.page-content .post-entry h2{font-size:20px}
+.page-content .post-entry h3{font-size:18px}
+.page-content .post-entry h1,.page-content .post-entry h2,.page-content .post-entry h3{font-weight:600}
+.page-content .post-footer{text-align:right;margin:15px 0 10px;padding-bottom:15px}
+.page-pagination{text-align:center}.page-pagination .pagination li a.active{text-decoration:none;color:#fff;background-color:#22bcdd}
+.page-pagination .pagination li a:hover,.page-pagination .pagination li a:focus{color:#fff;text-decoration:none;background-color:#0ca3c4}
+.page-pagination .pagination li a.disabled{text-decoration:line-through}
+.page-tags{margin:2px;padding:2px;background-color:#fff}.page-tags a{color:#222}.page-tags a span{vertical-align:super;font-size:.75em}
+.page-tags a:hover,.page-tags a:focus{color:#fff;text-decoration:none}
+.page-tags ul{margin-top:5px;margin-bottom:5px;padding:2px}.page-tags ul li{margin:2px;padding:2px;display:inline-block;color:#fff;background-color:#f3f3f3;font-size:14px;line-height:20px;cursor:pointer;border-radius:2px;-webkit-transition:opacity .2s ease-in-out;transition:opacity .2s ease-in-out}
+.page-tags ul li:hover,.page-tags ul li:focus{opacity:1;background-color:#0ca3c4}
+.page-list h3{text-align:center;margin:3px;border-bottom:1px solid #ddd;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
+.page-list ul{margin:2px 0;padding:3px 0}.page-list ul li{margin:0;padding:1px 0;list-style:none;font-size:1.05em;border-radius:1px}.page-list ul li a{padding-left:10px;color:#222}.page-list ul li a span{float:right;padding-right:20px}
+.page-list ul li:hover,.page-list ul li:active{background-color:#5bc0de}.page-list ul li:hover a,.page-list ul li:active a{color:#fff}
+.page-list ul li:hover span,.page-list ul li:active span{color:#222}
+.page-header{margin:10px 0;color:#222;font-size:24px;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:28px;text-align:center;border-bottom:none}
+.navbar-brand{margin:0;padding:2px 10px;color:#333;float:none;font-size:24px;font-weight:500;line-height:35px;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
+.nav>li{display:inline-block;float:left}.nav>li a{color:#fff;padding:2px 10px;font-size:16px;font-weight:600;line-height:24px;border-radius:1px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif}
+.nav>li a:hover,.nav>li a:focus{color:#fff;background:#0ca3c4}
+.nav .caret{border-top-color:#fff}
+.nav a:hover .caret{border-top-color:#fff;border-bottom-color:#fff}
+.nav .open>a,.nav .open>a:hover,.nav .open>a:focus{background:#0ca3c4;border-color:#428bca}
+.nav .dropdown a:focus{outline:none}
+.dropdown-menu{background-color:#1e6e1e}
+.list-group-item{padding:5px 15px}
+.page-category ul .list-group-item{padding:5px 30px}
+.panel-default>.panel-heading{background-color:#e0dfdf}
+.panel-heading{padding:5px;font-weight:600;text-align:center;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
+.category-heading{color:#5bc0de;font-size:16px;font-weight:500;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
+.about-heading{font-size:18px;font-weight:600;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
+.read-more{line-height:20px;font-size:14px;color:#fffffe;font-weight:700;text-align:right}.read-more a{text-decoration:none;color:#fff;background-color:#22bcdd;padding:2px 12px;display:inline-block}
+.read-more a:hover,.read-more a:focus{text-decoration:none;background-color:#0ca3c4}
+#page-tagcloud{padding:10px}#page-tagcloud a{margin:2px;padding:2px;line-height:24px}
+#page-tagcloud a span{vertical-align:super;font-size:.75em}
+#page-tagcloud a:hover,#page-tagcloud a:focus{background:#f3f3f3}
+@media (min-width:1200px){.container{width:970px}}@media (max-width:768px){.navbar-brand{padding:5px} .nav>li a{color:#fff;padding:5px;line-height:20px}}@media (max-width:479px){.page-list ul li a span{display:none}}

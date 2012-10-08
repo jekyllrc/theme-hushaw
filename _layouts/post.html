@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="page-content">
+    <div class="post-heading">
+        {{ page.title }}
+    </div>
+    <div class="post-meta">
+        <span>
+            <i class="icon-calendar"></i>
+            {{ page.date | date: "%B %e, %Y" }}
+        </span>
+        <span>
+            <i class="icon-th-list"></i>
+            {% for cat in page.categories %}
+            <a href="/categories.html#{{ cat }}-ref">{{ cat }}</a>
+            {% endfor %}
+        </span>
+        <span>
+            <i class="icon-tags"></i>
+            {% for tag in page.tags %}
+            <a href="/tags.html#{{ tag }}-ref">{{ tag }}</a>
+            {% endfor %}
+        </span>
+    </div>
+    <div class="post-entry">
+        {{ content }}
+    </div>
+</div>
+<div class="post-pager">
+    <ul class="pager">
+        {% if page.previous %}
+        <li class="previous">
+            <a href="{{ page.previous.url }}"><i class="icon-arrow-left"></i> {{ page.previous.title }}</a>
+        </li>
+        {% endif %}
+        {% if page.next %}
+            <li class="next">
+                <a href="{{ page.next.url }}" class="pull-right">{{ page.next.title }} <i class="icon-arrow-right"></i></a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">相关文章</div>
+    <div class="page-list">
+        <ul>
+        {% for post in site.related_posts limit: 5 %}
+            <li><a href="{{ post.url }}">{{ post.title }}<span>{{ post.date | date: "%B %e, %Y" }}</span></a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% include disqus_comments.md %}
+
