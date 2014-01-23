@@ -1,10 +1,6 @@
 //
 // Variables
 // --------------------------------------------------
-//@import url("//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
-//@import url("//fonts.googleapis.com/css?family=Droid+Sans:400,700,400italic,700italic");
-@import url(http://fonts.googleapis.com/css?family=Galdeano);
-@import url(http://fonts.googleapis.com/css?family=Cuprum);
 
 
 // Global values
@@ -42,16 +38,11 @@
 
 // Typography
 // -------------------------
-@font-family-sans-serif:  "Galdeano","Microsoft YaHei","Droid Sans", "Helvetica Neue",Verdana,sans-serif;
-@font-family-serif:       @font-family-sans-serif;
-@font-family-monospace:   Menlo,"Andale Mono",Consolas,"Courier New",Monaco,monospace;
+
+@font-family-sans-serif:  "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       "Microsoft YaHei", Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
-
-
-//@font-family-sans-serif:  "Droid Sans","Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//@font-family-serif:       "Droid Serif","Microsoft YaHei", Georgia, "Times New Roman", Times, serif;
-//@font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
-
 
 @font-size-base:          14px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
@@ -67,40 +58,34 @@
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-//@headings-font-family:  @font-family-base;
-@headings-font-family:    "Cuprum", "Hiragino Sans GB","Microsoft YaHei","Droid Sans", 
-                          "Helvetica Neue", Helvetica, Arial,sans-serif;
+@headings-font-family:    @font-family-base;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
-
-
-// Iconography
-// -------------------------
-
-//@icon-font-path:          "../fonts/";
-//@icon-font-name:          "glyphicons-halflings-regular";
 
 
 // Components
 // -------------------------
 // Based on 14px font-size and 1.428 line-height (~20px to start)
 
-@padding-base-vertical:          5px;
+@padding-base-vertical:          6px;
 @padding-base-horizontal:        12px;
 
-@padding-large-vertical:         8px;
+@padding-large-vertical:         10px;
 @padding-large-horizontal:       16px;
 
-@padding-small-vertical:         3px;
+@padding-small-vertical:         5px;
 @padding-small-horizontal:       10px;
+
+@padding-xs-vertical:            1px;
+@padding-xs-horizontal:          5px;
 
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             3px;
-@border-radius-large:            5px;
-@border-radius-small:            2px;
+@border-radius-base:             4px;
+@border-radius-large:            6px;
+@border-radius-small:            3px;
 
 @component-active-color:         #fff;
 @component-active-bg:            @brand-primary;
@@ -111,8 +96,8 @@
 // Tables
 // -------------------------
 
-@table-cell-padding:                 5px;
-@table-condensed-cell-padding:       3px;
+@table-cell-padding:                 8px;
+@table-condensed-cell-padding:       5px;
 
 @table-bg:                           transparent; // overall background-color
 @table-bg-accent:                    #f9f9f9; // for striping
@@ -168,7 +153,7 @@
 @input-color-placeholder:        @gray-light;
 
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
-@input-height-large:             (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
 @legend-color:                   @gray-dark;
@@ -196,8 +181,6 @@
 @dropdown-link-disabled-color:   @gray-light;
 
 @dropdown-header-color:          @gray-light;
-
-@dropdown-caret-color:           #000;
 
 
 // COMPONENT VARIABLES
@@ -257,8 +240,13 @@
 @grid-columns:              12;
 // Padding, to be divided by two and applied to the left and right of all columns
 @grid-gutter-width:         30px;
-// Point at which the navbar stops collapsing
+
+// Navbar collapse
+
+// Point at which the navbar becomes uncollapsed
 @grid-float-breakpoint:     @screen-sm-min;
+// Point at which the navbar begins collapsing
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
 
 // Navbar
@@ -332,7 +320,6 @@
 @nav-disabled-link-hover-color:             @gray-light;
 
 @nav-open-link-hover-color:                 #fff;
-@nav-open-caret-border-color:               #fff;
 
 // Tabs
 @nav-tabs-border-color:                     #ddd;
@@ -369,7 +356,7 @@
 // Pager
 // -------------------------
 
-@pager-border-radius:                  5px;
+@pager-border-radius:                  15px;
 @pager-disabled-color:                 @gray-light;
 
 
@@ -379,26 +366,26 @@
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
 @jumbotron-bg:                   @gray-lighter;
-
 @jumbotron-heading-color:        inherit;
+@jumbotron-font-size:            ceil(@font-size-base * 1.5);
 
 
 // Form states and alerts
 // -------------------------
 
-@state-success-text:             #468847;
+@state-success-text:             #3c763d;
 @state-success-bg:               #dff0d8;
 @state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                #3a87ad;
+@state-info-text:                #31708f;
 @state-info-bg:                  #d9edf7;
 @state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
-@state-warning-text:             #c09853;
+@state-warning-text:             #8a6d3b;
 @state-warning-bg:               #fcf8e3;
 @state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
 
-@state-danger-text:              #b94a48;
+@state-danger-text:              #a94442;
 @state-danger-bg:                #f2dede;
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 

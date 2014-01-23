@@ -1,15 +1,15 @@
 /*
  * application.less
+ * by @hushaw
+ * http://hushaw.github.io
  */
 @import "variables.less";
 @import "mixins.less";
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////
 body {
-    color: @text-color;
-    font-size: @font-size-base;
-    font-family:@font-family-sans-serif;
-    background: url("/static/img/dust.png") repeat fixed;
+    font-family: "PT Serif",Georgia,"Microsoft YaHei",Arial,sans-serif;
+    background: url("/static/img/light.png") repeat fixed;
 }
 li.L4 {
     list-style-type: none;
@@ -20,118 +20,274 @@ pre {
     word-break:break-all;
     word-wrap:break-word;
     background-color: #eee;
-    box-shadow: 5px 5px 5px #888;
-    padding: 5px;
+    box-shadow: 4px 4px 4px #888;
+    padding: 4px;
     overflow: auto;
+}
+::selection {
+    background: #c3e99e;
+    text-shadow: none;
+}
+h1, h2, h3 {
+    font-family: Georgia,"Times New Roman",Times,"Kai","Kaiti SC","KaiTi","BiauKai","楷体","楷体_GB2312",serif;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
 .page-heading {
-    margin: 5px auto 10px;
-    a:focus, a:hover {
-        color: #222;
+    border-top: 2px solid #bbb;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 9999;
+}
+.page-brand {
+    margin: 0 7.5%;
+    display: block;
+    h1 {
+        padding: 1.05em 0 0;
+        a {
+            color: #111;
+            font-size: 28px;
+            font-weight: bold;
+            font-family: Consolas,Monaco,'Courier New',Courier,'Andale Mono','DejaVu Sans Mono',monospace!important;
+            line-height: 32px;
+            text-decoration: none;
+        }
+    }
+    h2 {
+        color: #7a7a7a;
+        font-size: 18px;
+        margin: 1em 0 1.25em;
     }
 }
 .page-navbar {
-    margin-bottom: 2px;
-    background-color: #1e6e1e;
-}
-.page-article {
-    margin: 5px 0;
-    padding: 5px;
-}
-.page-footer {
-    color: #555;
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    font-size: 16px;
-    a {
-        font-size: 18px;
-        color: @brand-success;
+    margin: 0 auto 6px;
+    overflow: hidden;
+    background:#000;
+    .page-navbar-container {
+        margin: 0 7.5%;
+        .page-nav {
+            font-size: 13px;
+            list-style: none;
+            margin: 0 0 0 -10px;
+            padding-left: 0;
+            li {
+                float: left;
+                position: relative;
+            }
+            a {
+                color: #eee;
+                display: block;
+                line-height: 3.5em;
+                padding: 0 1.25em;
+                text-decoration: none;
+            }
+            a:hover, a:focus {
+                color: #222;
+                background: #fff;
+            }
+        }
     }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
-.page-content,
-.page-comment,
-.page-categories,
-.page-tags {
-    padding: 5px 15px;
+.page-article {
+    margin: 0 7.5%;
+    width: auto;
 }
-.page-blank {
-    margin-top:20px;
+.page-header {
+    padding-bottom: 10px;
+    margin: 30px 0 20px;
+    border-bottom: 1px solid #bbb;
+    h2 {
+        font-weight: 500;
+        font-family: Georgia,"Times New Roman",Times,"Kai","Kaiti SC","KaiTi","BiauKai","楷体","楷体_GB2312",serif;
+    }
 }
 .page-content {
-    background-color: #fff;
-    border: 1px solid #f3f3f3;
-    border-radius: 4px;
-    box-shadow: inset 0 2px 0 rgba(255,255,255,.1);
-    margin-bottom: 20px;
-    a {
-        color: @brand-info;
-    }
+    border-bottom: 1px dashed #aaa;
+    margin: 0 0 1.5em;
+    padding: 0 0 1.5em;
+    position: relative;
     .post-heading {
-        color: #000;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 28px;
-        font-family: @headings-font-family;
-        border-bottom: 1px solid #ddd;
+        color: #222;
+        text-decoration: none;
+        clear: both;
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 1.15em;
+        padding-bottom: .5em;
+        padding-top: 12px;
+        font-family: Georgia,"Times New Roman",Times,"Kai","Kaiti SC","KaiTi","BiauKai","楷体","楷体_GB2312",serif;
         a {
-            color: @gray-darker;
+            color: #222;
+            text-decoration: none;
         }
     }
     .post-meta {
-        font-size: 15px;
-        font-family:@font-family-sans-serif;
-        margin: 10px;
-        //padding-left: 0;
-        color: @gray;
+        color: #666;
+        clear: both;
+        font-size: 13px;
+        line-height: 18px;
+        border-bottom: 1px solid #d5d5d5;
+        padding: .5em;
+        span {
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+        a {
+            font-weight: 500;
+        }
     }
     .post-entry {
-        padding:4px;
+        padding: 1.5em 0 0;
         font-size: 14px;
-        font-family:@font-family-sans-serif;
-        line-height: 24px;
-        h1 { font-size: 24px;}
-        h2 { font-size: 20px;}
-        h3 { font-size: 18px;}
-        h1, h2, h3 {
-            font-weight: 600;
+        blockquote p {
+            font-size: 15px;
         }
     }
     .post-footer {
-        text-align: right;
-        margin: 15px 0 10px;
-        padding-bottom:15px;
+        clear: both;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 35px;
     }
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.page-footer {
+    border-top: 1px solid #ddd;
+    color: #555;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5em;
+    padding: 1.5em .5em;
+    text-align: center;
+    a {
+        color: #1982d1;
+    }
+    .page-generator-time {
+        padding: 0 3px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #428bca;
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.page-list {
+    h3 {
+        color: #428bca;
+        font-family: Georgia,"Times New Roman",Times,"Kai","Kaiti SC","KaiTi","BiauKai","楷体","楷体_GB2312",serif;
+    }
+    ul {
+        font-size: 15px;
+        list-style: square;
+        margin-bottom: 15px;
+        li {
+            margin: 4px;
+            span {
+                color: #555;
+                font-weight: 500;
+                line-height: 1.2em;
+            }
+            span:after {
+                content: "»";
+                margin: 0 10px;
+            }
+            a {
+                color: #222;
+                padding: 2px;
+            }
+            a:hover, a:focus {
+                color: #333;
+                border-radius: 1px;
+            }
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.page-blank {
+    margin: 1em 0 1.5em;
+    padding: 0 0 1.5em;
+    position: relative;
+}
+.read-more {
+    background: #d4dad8;
+    display: inline-block;
+    margin-top: 10px;
+    padding: .4em .8em;
+    text-decoration: none;
+    float: right;
+    a {
+        color: #222;
+        text-decoration: none;
+    }
+}
+.read-more:hover, .read-more:focus {
+    background: #428bca;
+    a {
+        color: #fff;
+    }
+}
+.post-pager {
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #aaa;
+}
+.pager {
+    list-style: none;
+    li {
+        a {
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 1.5em;
+            color: #1982d1;
+            text-decoration: none;
+        }
+        a:hover, a:focus{
+            color: #fff;
+            background: #c3e99e;
+        }
+    }
+}
 .page-pagination {
     text-align: center;
     .pagination li{
-        a.active {
+        a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1982d1;
             text-decoration: none;
-            color: #fff;
-            background-color: #22bcdd;
+        }
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            background: transparent;
+        }
+        a.active {
+            color: #1982d1;
+            text-decoration: underline;
         }
         a:hover, a:focus {
             color: #fff;
-            text-decoration: none;
-            background-color: #0ca3c4;
-        }
-        a.disabled {
-            text-decoration: line-through;
+            background-color: #428bca;
         }
     }
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////
 .page-tags {
-    margin: 2px;
-    padding: 2px;
-    background-color: #fff;
+    margin: 15px 0 35px;
+    padding: 10px 0 25px;
+    border-bottom: 1px solid #aaa;
     a {
         color: #222;
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: 5px;
         span{
             vertical-align: super;
             font-size: 0.75em;
@@ -139,213 +295,12 @@ pre {
     }
     a:hover,a:focus {
         color: #fff;
-        text-decoration: none;
     }
-    ul {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding: 2px;
-        li {
-            margin: 2px;
-            padding: 2px;
-            display: inline-block;
-            color: #fff;
-            background-color: #f3f3f3;
-            font-size: 14px;
-            line-height: 20px;
-            cursor: pointer;
-            border-radius: 2px;
-            .transition(opacity 0.2s ease-in-out)
-        }
-        li:hover, li:focus {
-            opacity: 1;
-            background-color: #0ca3c4;
-        }
-    }
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////
-.page-list {
-    h3 {
-        text-align: center;
-        margin: 3px;
-        border-bottom: 1px solid #ddd;
-        font-family: @headings-font-family;
-    }
-    ul {
-        margin: 2px 0;
-        padding: 3px 0;
-        li {
-            margin: 0;
-            padding: 1px 0;
-            list-style: none;
-            font-size: 1.05em;
-            border-radius: 1px;
-            a {
-                padding-left: 10px;
-                color: #222;
-                span {
-                    float: right;
-                    padding-right: 20px;
-                }
-            }
-        }
-        li:hover,
-        li:active {
-            a {
-                color: #fff;
-            }
-            span {
-                color: #222;
-            }
-            background-color: @brand-info;
-        }
-    }
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////
-.page-header {
-    margin: 10px 0;
-    color: @gray-darker;
-    font-size: 24px;
-    font-family: @headings-font-family;
-    line-height:28px;
-    text-align: center;
-    border-bottom: none;
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////
-.navbar-brand {
-    margin: 0;
-    padding: 2px 10px;
-    color: #333;
-    float: none;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 35px;
-    font-family: @headings-font-family;
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////
-.nav>li {
-    display: inline-block;
-    float: left;
-    a {
-        color: #fff;
-        padding: 2px 10px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 24px;
-        border-radius: 1px;
-        font-family: @font-family-base;
-    }
-    a:hover,a:focus {
-        color: #fff;
-        background: #0ca3c4;
-    }
-}
-.nav {
-    .caret {
-        border-top-color:#fff;
-    }
-    a:hover .caret {
-        border-top-color:#fff;
-        border-bottom-color:#fff;
-    }
-    .open>a, 
-    .open>a:hover, 
-    .open>a:focus {
-        background: #0ca3c4;
-        border-color: #428bca;
-    }
-    .dropdown a:focus {
-        outline: none;
-    }
-}
-.dropdown-menu {
-    background-color: #1e6e1e;
-}
-.list-group-item {
-    padding:  5px 15px;
-}
-.page-category ul .list-group-item {
-    padding:  5px 30px;
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-.panel-default > .panel-heading {
-    background-color: #e0dfdf;
-}
-.panel-heading {
-    padding: 5px;
-    font-weight:600;
-    text-align:center;
-    font-family: @headings-font-family;
-}
-.category-heading {
-    color:@brand-info;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: @headings-font-family;
-}
-.about-heading {
-    font-size:   18px;
-    font-weight: 600;
-    font-family: @headings-font-family;
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////
-.read-more {
-  line-height: 20px;
-  font-size: 14px;
-  color: #fffffe;
-  font-weight: 700;
-  text-align: right;
-  a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #22bcdd;
-    padding: 2px 12px;
-    display: inline-block;
-  }
-  a:hover, a:focus {
-    text-decoration: none;
-    background-color: #0ca3c4;
-  }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
-#page-tagcloud {
-    padding: 10px;
-    a {
-        margin: 2px;
-        padding: 2px;
-        line-height:24px;
-    }
-    a span {
-        vertical-align: super;
-        font-size: .75em;
-    }
-    a:hover,
-    a:focus {
-        background: #f3f3f3;
+@media (max-width: @screen-md-min) {
+    .page-container {
+        margin: 0 auto;
     }
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////
-@media (min-width: @screen-lg-min) {
-    .container {
-        width: 970px;
-    }
-}
-
-@media (max-width: @screen-sm-min) {
-    .navbar-brand {
-        padding: 5px;
-    }
-    .nav > li a {
-        color: #fff;
-        padding: 5px;
-        line-height: 20px;
-    }
-}
-
-@media (max-width: 479px) {
-    .page-list ul li a span {
-        display: none;
-    }
-}
-
+//////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,51 +1,297 @@
-@import url(http://fonts.googleapis.com/css?family=Galdeano);
-@import url(http://fonts.googleapis.com/css?family=Cuprum);
-body{color:#333;font-size:14px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif;background:url("/static/img/dust.png") repeat fixed}
-li.L4{list-style-type:none}
-pre{white-space:pre;white-space:pre-wrap;word-break:break-all;word-wrap:break-word;background-color:#eee;box-shadow:5px 5px 5px #888;padding:5px;overflow:auto}
-.page-heading{margin:5px auto 10px}.page-heading a:focus,.page-heading a:hover{color:#222}
-.page-navbar{margin-bottom:2px;background-color:#1e6e1e}
-.page-article{margin:5px 0;padding:5px}
-.page-footer{color:#555;text-align:center;margin-top:10px;padding:10px;border-top:1px solid #ddd;font-size:16px}.page-footer a{font-size:18px;color:#5cb85c}
-.page-content,.page-comment,.page-categories,.page-tags{padding:5px 15px}
-.page-blank{margin-top:20px}
-.page-content{background-color:#fff;border:1px solid #f3f3f3;border-radius:4px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.1);margin-bottom:20px}.page-content a{color:#5bc0de}
-.page-content .post-heading{color:#000;font-size:20px;font-weight:500;line-height:28px;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;border-bottom:1px solid #ddd}.page-content .post-heading a{color:#222}
-.page-content .post-meta{font-size:15px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif;margin:10px;color:#555}
-.page-content .post-entry{padding:4px;font-size:14px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif;line-height:24px}.page-content .post-entry h1{font-size:24px}
-.page-content .post-entry h2{font-size:20px}
-.page-content .post-entry h3{font-size:18px}
-.page-content .post-entry h1,.page-content .post-entry h2,.page-content .post-entry h3{font-weight:600}
-.page-content .post-footer{text-align:right;margin:15px 0 10px;padding-bottom:15px}
-.page-pagination{text-align:center}.page-pagination .pagination li a.active{text-decoration:none;color:#fff;background-color:#22bcdd}
-.page-pagination .pagination li a:hover,.page-pagination .pagination li a:focus{color:#fff;text-decoration:none;background-color:#0ca3c4}
-.page-pagination .pagination li a.disabled{text-decoration:line-through}
-.page-tags{margin:2px;padding:2px;background-color:#fff}.page-tags a{color:#222}.page-tags a span{vertical-align:super;font-size:.75em}
-.page-tags a:hover,.page-tags a:focus{color:#fff;text-decoration:none}
-.page-tags ul{margin-top:5px;margin-bottom:5px;padding:2px}.page-tags ul li{margin:2px;padding:2px;display:inline-block;color:#fff;background-color:#f3f3f3;font-size:14px;line-height:20px;cursor:pointer;border-radius:2px;-webkit-transition:opacity .2s ease-in-out;transition:opacity .2s ease-in-out}
-.page-tags ul li:hover,.page-tags ul li:focus{opacity:1;background-color:#0ca3c4}
-.page-list h3{text-align:center;margin:3px;border-bottom:1px solid #ddd;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
-.page-list ul{margin:2px 0;padding:3px 0}.page-list ul li{margin:0;padding:1px 0;list-style:none;font-size:1.05em;border-radius:1px}.page-list ul li a{padding-left:10px;color:#222}.page-list ul li a span{float:right;padding-right:20px}
-.page-list ul li:hover,.page-list ul li:active{background-color:#5bc0de}.page-list ul li:hover a,.page-list ul li:active a{color:#fff}
-.page-list ul li:hover span,.page-list ul li:active span{color:#222}
-.page-header{margin:10px 0;color:#222;font-size:24px;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:28px;text-align:center;border-bottom:none}
-.navbar-brand{margin:0;padding:2px 10px;color:#333;float:none;font-size:24px;font-weight:500;line-height:35px;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
-.nav>li{display:inline-block;float:left}.nav>li a{color:#fff;padding:2px 10px;font-size:16px;font-weight:600;line-height:24px;border-radius:1px;font-family:"Galdeano","Microsoft YaHei","Droid Sans","Helvetica Neue",Verdana,sans-serif}
-.nav>li a:hover,.nav>li a:focus{color:#fff;background:#0ca3c4}
-.nav .caret{border-top-color:#fff}
-.nav a:hover .caret{border-top-color:#fff;border-bottom-color:#fff}
-.nav .open>a,.nav .open>a:hover,.nav .open>a:focus{background:#0ca3c4;border-color:#428bca}
-.nav .dropdown a:focus{outline:none}
-.dropdown-menu{background-color:#1e6e1e}
-.list-group-item{padding:5px 15px}
-.page-category ul .list-group-item{padding:5px 30px}
-.panel-default>.panel-heading{background-color:#e0dfdf}
-.panel-heading{padding:5px;font-weight:600;text-align:center;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
-.category-heading{color:#5bc0de;font-size:16px;font-weight:500;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
-.about-heading{font-size:18px;font-weight:600;font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
-.read-more{line-height:20px;font-size:14px;color:#fffffe;font-weight:700;text-align:right}.read-more a{text-decoration:none;color:#fff;background-color:#22bcdd;padding:2px 12px;display:inline-block}
-.read-more a:hover,.read-more a:focus{text-decoration:none;background-color:#0ca3c4}
-#page-tagcloud{padding:10px}#page-tagcloud a{margin:2px;padding:2px;line-height:24px}
-#page-tagcloud a span{vertical-align:super;font-size:.75em}
-#page-tagcloud a:hover,#page-tagcloud a:focus{background:#f3f3f3}
-@media (min-width:1200px){.container{width:970px}}@media (max-width:768px){.navbar-brand{padding:5px} .nav>li a{color:#fff;padding:5px;line-height:20px}}@media (max-width:479px){.page-list ul li a span{display:none}}
+/*
+ * application.less
+ * by @hushaw
+ * http://hushaw.github.io
+ */
+body {
+  font-family: "PT Serif", Georgia, "Microsoft YaHei", Arial, sans-serif;
+  background: url("/static/img/light.png") repeat fixed;
+}
+li.L4 {
+  list-style-type: none;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #eee;
+  box-shadow: 4px 4px 4px #888;
+  padding: 4px;
+  overflow: auto;
+}
+::selection {
+  background: #c3e99e;
+  text-shadow: none;
+}
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", Times, "Kai", "Kaiti SC", "KaiTi", "BiauKai", "楷体", "楷体_GB2312", serif;
+}
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+.page-heading {
+  border-top: 2px solid #bbb;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 9999;
+}
+.page-brand {
+  margin: 0 7.5%;
+  display: block;
+}
+.page-brand h1 {
+  padding: 1.05em 0 0;
+}
+.page-brand h1 a {
+  color: #111;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Consolas, Monaco, 'Courier New', Courier, 'Andale Mono', 'DejaVu Sans Mono', monospace !important;
+  line-height: 32px;
+  text-decoration: none;
+}
+.page-brand h2 {
+  color: #7a7a7a;
+  font-size: 18px;
+  margin: 1em 0 1.25em;
+}
+.page-navbar {
+  margin: 0 auto 6px;
+  overflow: hidden;
+  background: #000;
+}
+.page-navbar .page-navbar-container {
+  margin: 0 7.5%;
+}
+.page-navbar .page-navbar-container .page-nav {
+  font-size: 13px;
+  list-style: none;
+  margin: 0 0 0 -10px;
+  padding-left: 0;
+}
+.page-navbar .page-navbar-container .page-nav li {
+  float: left;
+  position: relative;
+}
+.page-navbar .page-navbar-container .page-nav a {
+  color: #eee;
+  display: block;
+  line-height: 3.5em;
+  padding: 0 1.25em;
+  text-decoration: none;
+}
+.page-navbar .page-navbar-container .page-nav a:hover,
+.page-navbar .page-navbar-container .page-nav a:focus {
+  color: #222;
+  background: #fff;
+}
+.page-article {
+  margin: 0 7.5%;
+  width: auto;
+}
+.page-header {
+  padding-bottom: 10px;
+  margin: 30px 0 20px;
+  border-bottom: 1px solid #bbb;
+}
+.page-header h2 {
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, "Kai", "Kaiti SC", "KaiTi", "BiauKai", "楷体", "楷体_GB2312", serif;
+}
+.page-content {
+  border-bottom: 1px dashed #aaa;
+  margin: 0 0 1.5em;
+  padding: 0 0 1.5em;
+  position: relative;
+}
+.page-content .post-heading {
+  color: #222;
+  text-decoration: none;
+  clear: both;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1.15em;
+  padding-bottom: .5em;
+  padding-top: 12px;
+  font-family: Georgia, "Times New Roman", Times, "Kai", "Kaiti SC", "KaiTi", "BiauKai", "楷体", "楷体_GB2312", serif;
+}
+.page-content .post-heading a {
+  color: #222;
+  text-decoration: none;
+}
+.page-content .post-meta {
+  color: #666;
+  clear: both;
+  font-size: 13px;
+  line-height: 18px;
+  border-bottom: 1px solid #d5d5d5;
+  padding: .5em;
+}
+.page-content .post-meta span {
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.page-content .post-meta a {
+  font-weight: 500;
+}
+.page-content .post-entry {
+  padding: 1.5em 0 0;
+  font-size: 14px;
+}
+.page-content .post-entry blockquote p {
+  font-size: 15px;
+}
+.page-content .post-footer {
+  clear: both;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 35px;
+}
+.page-footer {
+  border-top: 1px solid #ddd;
+  color: #555;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5em;
+  padding: 1.5em .5em;
+  text-align: center;
+}
+.page-footer a {
+  color: #1982d1;
+}
+.page-footer .page-generator-time {
+  padding: 0 3px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #428bca;
+}
+.page-list h3 {
+  color: #428bca;
+  font-family: Georgia, "Times New Roman", Times, "Kai", "Kaiti SC", "KaiTi", "BiauKai", "楷体", "楷体_GB2312", serif;
+}
+.page-list ul {
+  font-size: 15px;
+  list-style: square;
+  margin-bottom: 15px;
+}
+.page-list ul li {
+  margin: 4px;
+}
+.page-list ul li span {
+  color: #555;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+.page-list ul li span:after {
+  content: "»";
+  margin: 0 10px;
+}
+.page-list ul li a {
+  color: #222;
+  padding: 2px;
+}
+.page-list ul li a:hover,
+.page-list ul li a:focus {
+  color: #333;
+  border-radius: 1px;
+}
+.page-blank {
+  margin: 1em 0 1.5em;
+  padding: 0 0 1.5em;
+  position: relative;
+}
+.read-more {
+  background: #d4dad8;
+  display: inline-block;
+  margin-top: 10px;
+  padding: .4em .8em;
+  text-decoration: none;
+  float: right;
+}
+.read-more a {
+  color: #222;
+  text-decoration: none;
+}
+.read-more:hover,
+.read-more:focus {
+  background: #428bca;
+}
+.read-more:hover a,
+.read-more:focus a {
+  color: #fff;
+}
+.post-pager {
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #aaa;
+}
+.pager {
+  list-style: none;
+}
+.pager li a {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.5em;
+  color: #1982d1;
+  text-decoration: none;
+}
+.pager li a:hover,
+.pager li a:focus {
+  color: #fff;
+  background: #c3e99e;
+}
+.page-pagination {
+  text-align: center;
+}
+.page-pagination .pagination li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1982d1;
+  text-decoration: none;
+}
+.page-pagination .pagination li span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background: transparent;
+}
+.page-pagination .pagination li a.active {
+  color: #1982d1;
+  text-decoration: underline;
+}
+.page-pagination .pagination li a:hover,
+.page-pagination .pagination li a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+.page-tags {
+  margin: 15px 0 35px;
+  padding: 10px 0 25px;
+  border-bottom: 1px solid #aaa;
+}
+.page-tags a {
+  color: #222;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.page-tags a span {
+  vertical-align: super;
+  font-size: 0.75em;
+}
+.page-tags a:hover,
+.page-tags a:focus {
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .page-container {
+    margin: 0 auto;
+  }
+}

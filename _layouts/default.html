@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <meta name="description" content="signifox's blog">
-    <meta name="author" content="signifox">
+    <meta name="description" content="jelyll theme">
+    <meta name="author" content="hushaw">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/favicon.ico" rel="shortcut icon">
     <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
@@ -15,56 +15,44 @@
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-    <div class="page-heading">
-        <div class="container">
-            <header>
-                <a href="/" class="navbar-brand">[signifox@localhost ~]$</a>  
-            </header>
-        </div>
-    </div>
-    <div class="page-navbar">
-         <div class="container">
-            <nav>
-                <ul class="nav">
-                     <li><a href="/">Home</a></li>
-                     <li><a href="/archive.html">Archive</a></li>
-                     <li><a href="/categories.html">Categories</a></li>
-                     <li><a href="/tags.html">Tags</a></li>
-                     <li><a href="/about.html">About</a></li>
+     <div class="page-container">
+     <div class="page-heading">
+         <div class="page-brand">
+             <h1><a href="/">sigmar</a></h1>
+             <h2>河蟹娱乐,折腾斯基</h2>
+         </div>
+         <div class="page-navbar">
+             <div class="page-navbar-container">
+                 <ul class="page-nav">
+                     <li><a href="/">首页</a></li>
+                     <li><a href="/archive.html">归档</a></li>
+                     <li><a href="/about.html">关于</a></li>
                  </ul>
-             </nav>
-        </div>
-    </div>
-    <div class="page-article">
-        <div class="container">
-            <article>
-                {{ content }}
-            </article>
-        </div>
-    </div>
-    <div class="page-footer">
-        <div class="container">
-            <footer>
-                <span>
-                    Powered by
-                    <a href="https://github.com/mojombo/jekyll">Jekyll</a>
-                    | Copyright 2010-{{site.time | date:"%Y"}} by
-                    <a href="/about.html"> signifox</a>
-                    |
-                </span>
-                <span class="label label-success">{{site.time | date:"%Y-%m-%d %H:%M:%S"}}</span>
-            </footer>
-        </div>
-    </div>
-    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
-    <script src="/static/google-code-prettify/prettify.js" type="text/javascript"></script>
-    <script type="text/javascript">
+             </div>
+         </div>
+     </div>
+     <div class="page-article">
+         {{ content }}
+     </div>
+     <div class="page-footer">
+         <span>
+             Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> 
+             | Hosted by <a href="http://github.com">Github.com</a> 
+             | UI Designed by <a href="/about.html">signifox</a> 
+             | <span class="page-generator-time">{{site.time | date:"%Y年%m月%d日 %H时%M分%S秒"}} </span> 
+             | 本站理念：生命不息，折腾不止..
+         </span>
+     </div>
+     </div>
+     <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+     <script src="/static/google-code-prettify/prettify.js" type="text/javascript"></script>
+     <script type="text/javascript">
         $(document).ready(function() {
             $('pre').addClass('prettyprint').attr('style', 'overflow:auto');
             prettyPrint();
         });
-    </script>
-    {% include google_analysis.md %}
+     </script>
+     {% include google_analysis.md %}
 </body>
 </html>
 
